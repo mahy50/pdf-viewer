@@ -1,0 +1,48 @@
+{
+  "name": "pdf-viewer",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./build/pdf-viewer.common.js",
+  "scripts": {
+    "serve": "vue-cli-service serve ./examples/main.js",
+    "docs": "vue-cli-service build examples/main.js --dest docs",
+    "build": "vue-cli-service build src/index.js --target lib --name vue-flipcard --dest build",
+    "build:report": "vue-cli-service build src/index.js --target lib --name vue-flipcard --dest build --report"
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.0",
+    "@vue/cli-service": "^3.2.0",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "off",
+      "no-unused-vars": "off"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
